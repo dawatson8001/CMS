@@ -22,8 +22,10 @@
                     } else{
                         $page_1 = ($page *5) - $per_page;
                     }
-                    if(($_SESSION['username']) && (isAdmin($_SESSION['username']))){
+                    if($_SESSION['username']){
+                        if($_SESSION['user_role'] == 'admin'){
                         $post_query_count = "SELECT * FROM posts";
+                        }
                     }else {
                         $post_query_count = "SELECT * FROM posts WHERE post_status = 'published'";
                     }
