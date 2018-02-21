@@ -15,7 +15,7 @@ echo "HELLO";
             'password'=>''
         ];
         echo "HELLO2";
-       if(($username !== '') && (!usernameExists($username)) && (!emailExists($email)) && ($email !== '')) && ($password !== ''){
+       if(($username !== '') && (!usernameExists($username)) && (!emailExists($email)) && ($email !== '') && ($password !== ''){
            
             //$error['username'] = 'Username needs to be longer';
 //        }
