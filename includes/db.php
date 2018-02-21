@@ -12,7 +12,7 @@ $db['db_user'] = "b2e6fde5c104d3";
 $db['db_pass'] = "2ccf37cb";
 $db['db_name'] = "heroku_881f91971a99a01";
 
-$connection = new mysqli($server, $username, $password, $db);
+$connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 //online settings
 //$url = parse_url(getenv("mysql://b2e6fde5c104d3:2ccf37cb@us-cdbr-iron-east-05.cleardb.net/heroku_881f91971a99a01?reconnect=true"));
