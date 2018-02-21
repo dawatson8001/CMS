@@ -8,7 +8,7 @@ $db['db_port'] = "8889";*/
 
 
 //online settings
-$url = parse_url(getenv("mysql://b2e6fde5c104d3:2ccf37cb@us-cdbr-iron-east-05.cleardb.net/heroku_881f91971a99a01?"));
+$url = parse_url(getenv("mysql://b2e6fde5c104d3:2ccf37cb@us-cdbr-iron-east-05.cleardb.net/heroku_881f91971a99a01?reconnect=true"));
 
 $server = $url["host"];
 $username = $url["user"];
@@ -17,11 +17,11 @@ $db = substr($url["path"], 1);
 
 $conn = new mysqli($server, $username, $password, $db);
 
-foreach($db as $key => $value){
+//foreach($db as $key => $value){
     define(strtoupper($key), $value);
 }
 
-    $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+    //$connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     /* if($connection){
         echo "We are connected";
