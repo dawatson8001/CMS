@@ -33,11 +33,10 @@
                 unset($error[$key]);
             }
         }
-        echo"Hello5";
-        if(empty($error)){
+        //if(empty($error)){
             registerUser($username, $email, $password);
             loginUser($_POST['username'], $_POST['password']);
-        }
+        //}
 
     }
     
