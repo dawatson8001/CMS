@@ -14,7 +14,7 @@ echo "HELLO";
             'email'=>'',
             'password'=>''
         ];
-        
+        echo "HELLO2";
         if(strlen($username)<4){
             $error['username'] = 'Username needs to be longer';
         }
@@ -30,16 +30,18 @@ echo "HELLO";
         if(strlen($password)==''){
             $error['password'] = 'Password cannot be empty';
         }
-
+echo "HELLO3";
         foreach ($error as $key => $value){
             if(empty($value)){
                 unset($error[$key]);
             }
         }
+        echo "HELLO4";
         if(empty($error)){
             registerUser($username, $email, $password);
             loginUser($_POST['username'], $_POST['password']);
         }
+        echo "HELLO5";
     }
 ?>        
 <!-- Navigation -->
