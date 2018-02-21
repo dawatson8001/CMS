@@ -120,7 +120,7 @@ function checkStatus($table, $column, $status){
 
 }
 
-function isAdmin($username = ''){
+function isAdmin($username){
 
     global $connection;
     $query = "SELECT user_role FROM users WHERE username = '$username'";
