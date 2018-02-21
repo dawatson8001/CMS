@@ -23,7 +23,7 @@
                     $cat_title = $row['cat_title'];
                     echo "<li><a href = '#'>{$cat_title}</a></li>";
                 }*/
-                if(isset($_SESSION['user_role'])){
+/*                if(isset($_SESSION['user_role'])){
                     if($_SESSION['user_role'] == 'admin'){
                         echo "<li><a href='admin'>CMS Admin</a></li>";
                     }
@@ -36,7 +36,7 @@
                         $the_post_id = $_GET['p_id'];
                         echo "<li><a href='admin/posts.php?source=edit_post&p_id={$the_post_id}'>Edit Post</a></li>";
                     }
-                }
+                }*/
                 ?> 
             </ul>
         </div>
