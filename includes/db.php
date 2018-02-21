@@ -8,7 +8,7 @@ $db['db_port'] = "8889";*/
 
 
 //online settings
-$url = parse_url(getenv("mysql://b2e6fde5c104d3:2ccf37cb@us-cdbr-iron-east-05.cleardb.net/heroku_881f91971a99a01?reconnect=true"));
+$url = parse_url(getenv("mysql://b2e6fde5c104d3:2ccf37cb@us-cdbr-iron-east-05.cleardb.net/heroku_881f91971a99a01?"));
 
 $server = $url["host"];
 $username = $url["user"];
