@@ -43,10 +43,13 @@
                 echo "<td><a href='../post.php?p_id=$post_id'>{$post_title}</a></td>";
 
             }*/
-            echo "<td><a href='users.php?change_to_admin=$user_id'>Admin</a></td>";
-            echo "<td><a href='users.php?change_to_subscriber=$user_id'>Subsciber</a></td>";
-            echo "<td><a href='users.php?source=edit_user&edit_user=$user_id'>Edit</a></td>";
-            echo "<td><a href='users.php?delete=$user_id'>Delete</a></td>";
+            if($user_role == 'admin'){
+                echo "<td><a class='btn btn-success' href='users.php?change_to_subscriber=$user_id'>Make Subscriber</a></td>";
+            }else{
+            echo "<td><a class='btn btn-success' href='users.php?change_to_admin=$user_id'>Make Admin</a></td>";
+            }
+            echo "<td><a class='btn btn-info' href='users.php?source=edit_user&edit_user=$user_id'>Edit</a></td>";
+            echo "<td><a class='btn btn-danger' href='users.php?delete=$user_id'>Delete</a></td>";
             echo "</tr>";
         }
         ?>
@@ -54,13 +57,13 @@
 </table>
 <?php
 if(isset($_GET['change_to_admin'])){
-    $the_user_id = escape($_GET['change_to_admin']);
+    $the_user_id = $_GET['change_to_admin'];
     $query = "UPDATE users SET user_role = 'admin' WHERE user_id = {$the_user_id} ";
     $change_to_admin_query = mysqli_query($connection, $query);
     header("Location: users.php");
 }
 if(isset($_GET['change_to_subscriber'])){
-    $the_user_id = escape($_GET['change_to_subscriber']);
+    $the_user_id = $_GET['change_to_subscriber'];
     $query = "UPDATE users SET user_role = 'subscriber' WHERE user_id = {$the_user_id} ";
     $change_to_subscriber_query = mysqli_query($connection, $query);
     header("Location: users.php");

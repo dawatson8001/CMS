@@ -1,6 +1,6 @@
+<?php ob_start(); ?>
 <?php include_once "../includes/db.php";  ?>
 <?php include "../admin/functions.php"; ?>
-<?php ob_start(); ?>
 <?php session_start(); ?>
 <?php
     if(!isset($_SESSION['user_role']) || ($_SESSION['user_role'] !== 'admin')){
@@ -34,4 +34,5 @@
 <link href="./css/style.css" rel="stylesheet">
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script>
+<script src="./js/jquery.js"></script>
 </head>

@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_GET['p_id'])){ 
     $the_post_id = $_GET['p_id'];
 }
@@ -18,15 +19,16 @@ while($row = mysqli_fetch_assoc($select_posts_by_id)){
     $post_comment_count = $row['post_comment_count'];
     $post_date = $row['post_date'];
 }
+
 if(isset($_POST['update_post'])){
-    $post_user = escape($_POST['post_user']);
-    $post_title = escape($_POST['post_title']);
-    $post_category_id = escape($_POST['post_category']);
-    $post_status = escape($_POST['post_status']);
-    $post_image = escape($_FILES['image']['name']);
-    $post_image_temp = escape($_FILES['image']['tmp_name']);
-    $post_content = escape($_POST['post_content']);
-    $post_tags = escape($_POST['post_tags']);
+    $post_user = $_POST['post_user'];
+    $post_title = $_POST['post_title'];
+    $post_category_id = $_POST['post_category'];
+    $post_status = $_POST['post_status'];
+    $post_image = $_FILES['image']['name'];
+    $post_image_temp = $_FILES['image']['tmp_name'];
+    $post_content = $_POST['post_content'];
+    $post_tags = $_POST['post_tags'];
 
     move_uploaded_file($post_image_temp, "../images/$post_image" );
 
@@ -66,6 +68,7 @@ if(isset($_POST['update_post'])){
        <label for="categories">Categories</label>
         <select name="post_category" id="">
             <?php 
+            
             $query = "SELECT * FROM categories";
             $select_categories = mysqli_query($connection, $query);
             confirmQuery($select_categories);
@@ -73,6 +76,7 @@ if(isset($_POST['update_post'])){
             while($row = mysqli_fetch_assoc($select_categories)){
                 $cat_id = $row['cat_id'];
                 $cat_title = $row['cat_title'];
+                
                 if($cat_id == $post_category_id) {
                     echo "<option selected value='{$cat_id}'>{$cat_title}</option>";
                 } else {
@@ -87,6 +91,7 @@ if(isset($_POST['update_post'])){
         <select name="post_user" id="">
            <?php echo "<option selected value='{$post_user}'>{$post_user}</option>"; ?>
             <?php 
+            
             $users_query = "SELECT * FROM users";
             $select_users = mysqli_query($connection, $users_query);
             confirmQuery($select_users);
@@ -111,10 +116,6 @@ if(isset($_POST['update_post'])){
             ?>
         </select>
     </div>
-    <!--<div class="form-group">
-<label for="post_status">Post Status</label>
-<input value="<?php echo $post_status; ?>" type="text" class="form-control" name="post_status">
-</div> -->
     <div class="form-group">
         <img width="100" src="../images/<?php echo $post_image; ?>" alt="">
         <input name="image" type="file">
@@ -125,7 +126,7 @@ if(isset($_POST['update_post'])){
     </div>
     <div class="form-group">
         <label for="post_content">Post content</label>
-        <textarea class="form-control" name="post_content" id="body" cols="30" rows="10" ><?php echo $post_content; ?>
+        <textarea class="form-control" name="post_content" id="body" cols="30" rows="10" ><?php echo str_replace('\r\n', '</br>', $post_content); ?>
         </textarea>
     </div>
     <div class="form-group">

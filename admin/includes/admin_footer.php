@@ -1,5 +1,5 @@
 <!-- jQuery -->
-    <script src="./js/jquery.js"></script>
+    
     <script src="../admin/js/scripts.js"></script>
 
     <!-- Bootstrap Core JavaScript -->

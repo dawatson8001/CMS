@@ -2,6 +2,11 @@
 <html lang="en">
     <?php include "includes/admin_header.php"; ?>
     <body>
+    <?php
+       if(!isAdmin($_SESSION['username'])){
+           header("Location: index.php");
+       }
+       ?>
         <div id="wrapper">
             <!-- Navigation -->
             <?php include "includes/admin_navigation.php"; ?>
