@@ -22,11 +22,11 @@
                     } else{
                         $page_1 = ($page *5) - $per_page;
                     }
-                    if(($_SESSION) &&(isAdmin($_SESSION['username']))){
+                    //if(($_SESSION) && (isAdmin($_SESSION['username']))){
                         $post_query_count = "SELECT * FROM posts";
-                    }else {
-                        $post_query_count = "SELECT * FROM posts WHERE post_status = 'published'";
-                    }
+                    //}else {
+                    //    $post_query_count = "SELECT * FROM posts WHERE post_status = 'published'";
+                    //}
 
                     $find_count = mysqli_query($connection, $post_query_count);
                     $count = mysqli_num_rows($find_count);
