@@ -20,4 +20,4 @@
     <![endif]-->
     <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script>
 </head>
-<?php include "../cms/admin/functions.php"; ?>
+<?php include_once "../cms/admin/functions.php"; ?>

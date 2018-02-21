@@ -1,5 +1,6 @@
 <?php include "includes/db.php"; ?>
 <?php include "includes/header.php"; ?>
+<?php include_once "../cms/admin/functions.php"; ?>
 
 <?php
 
@@ -15,7 +16,7 @@ echo "HELLO";
             'password'=>''
         ];
         echo "HELLO2";
-       if((!empty($username)) && (!empty($email)) && (!empty($password))){
+       if((!empty($username)) && (!usernameExists($username)) && (!emailExists($email)) && (!empty($email)) && (!empty($password))){
            
             //$error['username'] = 'Username needs to be longer';
 //        }
