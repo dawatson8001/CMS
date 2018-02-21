@@ -178,7 +178,7 @@ function registerUser($username, $email, $password){
     $password = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
 
     $query = "INSERT INTO users (username, user_email, user_password, user_role) ";
-    $query .= "VALUES('{$username}', '{$email}', '{$password1}', 'subscriber')";
+    $query .= "VALUES('{$username}', '{$email}', '{$password}', 'subscriber')";
     $register_user_query = mysqli_query($connection, $query);
 }
 
