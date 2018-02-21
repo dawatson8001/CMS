@@ -35,7 +35,7 @@
         }
         //if(empty($error)){
             registerUser($username, $email, $password);
-            loginUser($_POST['username'], $_POST['password']);
+            loginUser($username, $password);
         //}
 
     }
