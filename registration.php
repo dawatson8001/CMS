@@ -1,6 +1,5 @@
 <?php include "includes/db.php"; ?>
 <?php include "includes/header.php"; ?>
-<?php include_once "../cms/admin/functions.php"; ?>
 
 <?php
 
