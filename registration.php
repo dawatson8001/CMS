@@ -8,41 +8,36 @@
         $username = trim($_POST['username']);
         $email    = trim($_POST['email']);
         $password = trim($_POST['password']);
-echo "HELLO";
         $error = [
             'username'=>'',
             'email'=>'',
             'password'=>''
         ];
-        echo "HELLO2";
-       if((!empty($username)) && (!usernameExists($username)) && (!emailExists($email)) && (!empty($email)) && (!empty($password))){
-           
-            //$error['username'] = 'Username needs to be longer';
-//        }
-//        if(strlen($username)==''){
-//            $error['username'] = 'Username cannot be empty';
-//        }
-//        if(usernameExists($username)){
-//            $error['username'] = 'Username already exists, please choose another.';
-//        }
-//        if(emailExists($email)){
-//            $error['email'] = 'Email already exists, <a href="index.php">Login</a>';
-//        }
-//        if(strlen($password)==''){
-//            $error['password'] = 'Password cannot be empty';
-//        }
-           echo "HELLO3";
-//        foreach ($error as $key => $value){
-//            if(empty($value)){
-//                unset($error[$key]);
-//            }
-//        }
-        echo "HELLO4";
-        //if(empty($error)){
+       if(strlen($username) > 4){ 
+            $error['username'] = 'Username needs to be longer';
+        }
+        if(strlen($username)==''){
+            $error['username'] = 'Username cannot be empty';
+        }
+        if(usernameExists($username)){
+            $error['username'] = 'Username already exists, please choose another.';
+        }
+        if(emailExists($email)){
+            $error['email'] = 'Email already exists, <a href="index.php">Login</a>';
+        }
+        if(strlen($password)==''){
+            $error['password'] = 'Password cannot be empty';
+        }
+        foreach ($error as $key => $value){
+            if(empty($value)){
+                unset($error[$key]);
+            }
+        }
+        if(empty($error)){
             registerUser($username, $email, $password);
             loginUser($_POST['username'], $_POST['password']);
-       // }
-        echo "HELLO5";
+        }
+
     }
     }
 ?>        
