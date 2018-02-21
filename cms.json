@@ -1,0 +1,42 @@
+[
+{"type":"header","version":"4.7.0","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"cms"},
+{"type":"table","name":"categories","database":"cms","data":
+[
+{"cat_id":"1","cat_title":"Bootstrap"},
+{"cat_id":"2","cat_title":"JavaScript"},
+{"cat_id":"3","cat_title":"PHP"},
+{"cat_id":"4","cat_title":"JAVA"},
+{"cat_id":"6","cat_title":"Python"},
+{"cat_id":"7","cat_title":"animals"}
+]
+}
+,{"type":"table","name":"comments","database":"cms","data":
+[
+{"comment_id":"1","comment_post_id":"1","comment_date":"2018-02-16","comment_author":"Dave","comment_email":"dave@dave.com","comment_content":"Happy Days are coming to townHappy Days are coming to townHappy Days are coming to townHappy Days are coming to townHappy Days are coming to townHappy Days are coming to townHappy Days are coming to townHappy Days are coming to townHappy Days are coming to townHappy Days are coming to town","comment_status":"approved"}
+]
+}
+,{"type":"table","name":"posts","database":"cms","data":
+[
+{"post_id":"18","post_category_id":"3","post_title":"Sooty","post_author":"davew","post_content":"<p>Sooty the Rabbit, enjoys big hops and curly kale.<\/p>","post_date":"2018-02-20","post_image":"IMG_4581.JPG","post_tags":"Rabbit, animals","post_comment_count":"0","post_status":"published","post_views_count":"0","post_user":"vic"},
+{"post_id":"32","post_category_id":"2","post_title":"Another Post","post_author":"davew","post_content":"<p><strong>Wow another post, woweeeeee<\/strong><\/p>","post_date":"2018-02-20","post_image":"","post_tags":"dave","post_comment_count":"0","post_status":"published","post_views_count":"1","post_user":"davew"},
+{"post_id":"33","post_category_id":"3","post_title":"Sooty","post_author":"davew","post_content":"<p>Sooty the Rabbit, enjoys big hops and curly kale.<\/p>","post_date":"2018-02-20","post_image":"IMG_4581.JPG","post_tags":"Rabbit, animals","post_comment_count":"0","post_status":"published","post_views_count":"0","post_user":"davew"},
+{"post_id":"35","post_category_id":"3","post_title":"Sooty","post_author":"davew","post_content":"<p>Sooty the Rabbit, enjoys big hops and curly kale.<\/p>","post_date":"2018-02-20","post_image":"IMG_4581.JPG","post_tags":"Rabbit, animals","post_comment_count":"0","post_status":"published","post_views_count":"0","post_user":"vic"},
+{"post_id":"36","post_category_id":"2","post_title":"Another Post","post_author":"davew","post_content":"<p><strong>Wow another post, woweeeeee<\/strong><\/p>","post_date":"2018-02-20","post_image":"","post_tags":"dave","post_comment_count":"0","post_status":"published","post_views_count":"0","post_user":"davew"},
+{"post_id":"37","post_category_id":"3","post_title":"Sooty","post_author":"davew","post_content":"<p>Sooty the Rabbit, enjoys big hops and curly kale.<\/p>","post_date":"2018-02-20","post_image":"IMG_4581.JPG","post_tags":"Rabbit, animals","post_comment_count":"0","post_status":"published","post_views_count":"0","post_user":"davew"}
+]
+}
+,{"type":"table","name":"users","database":"cms","data":
+[
+{"user_id":"7","username":"demo","user_password":"$2y$12$P.WAPBBJWVfSXOa.X0fPGOEALpsvegVc1czBs\/c.d1ceFdPuxGRoi","user_firstname":"Demo","user_lastname":"demo","user_email":"demo@demo","user_image":"","user_role":"admin","randSalt":"$2y$10$iusesomecrazystring22"},
+{"user_id":"10","username":"davew","user_password":"$2y$12$cSPYLp6ONpAX.qcqu.\/M.eqoOZeDF9oWYe1pu5XGmvkTvMtsaFo2m","user_firstname":"David","user_lastname":"Watson","user_email":"dave@dave","user_image":"","user_role":"admin","randSalt":"$2y$10$iusesomecrazystrings22"},
+{"user_id":"12","username":"vic","user_password":"$2y$12$0u0te3vmS65cYyJdgL8ScOtN7Pvsft869WHYECWqytvU198G1Z7ru","user_firstname":"vicky","user_lastname":"robson","user_email":"vic@ky","user_image":"","user_role":"subscriber","randSalt":"$2y$10$iusesomecrazystrings22"}
+]
+}
+,{"type":"table","name":"users_online","database":"cms","data":
+[
+{"id":"28","session":"d9dabfbbd7303d715599f85c98cb12fa","time":"1519217946"},
+{"id":"29","session":"fe198e3d30ec197295f3ddf761d1aa22","time":"1519217085"}
+]
+}
+]
