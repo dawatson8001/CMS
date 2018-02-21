@@ -15,7 +15,7 @@ echo "HELLO";
             'password'=>''
         ];
         echo "HELLO2";
-        if(strlen($username)<4){
+/*        if(strlen($username)<4){
             $error['username'] = 'Username needs to be longer';
         }
         if(strlen($username)==''){
@@ -35,7 +35,7 @@ echo "HELLO3";
             if(empty($value)){
                 unset($error[$key]);
             }
-        }
+        }*/
         echo "HELLO4";
         if(empty($error)){
             registerUser($username, $email, $password);
