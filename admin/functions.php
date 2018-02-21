@@ -173,17 +173,17 @@ function registerUser($username, $email, $password){
 
     $username = mysqli_real_escape_string($connection, $username);
     $email    = mysqli_real_escape_string($connection, $email);
-    $password = mysqli_real_escape_string($connection, $password);
+    $password1 = mysqli_real_escape_string($connection, $password);
 
-    $password = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
+    $password1 = password_hash($password1, PASSWORD_BCRYPT, array('cost' => 12));
 
     $query = "INSERT INTO users (username, user_email, user_password, user_role) ";
-    $query .= "VALUES('{$username}', '{$email}', '{$password}', 'subscriber')";
+    $query .= "VALUES('{$username}', '{$email}', '{$password1}', 'subscriber')";
     $register_user_query = mysqli_query($connection, $query);
+    loginUser($username, $password);
 }
 
 function loginUser($username, $password){
-
     global $connection;
 
     $username = trim($username);
@@ -194,6 +194,9 @@ function loginUser($username, $password){
 
     $query = "SELECT * FROM users WHERE username = '{$username}' ";
     $select_user_query = mysqli_query($connection, $query);
+    if(!$select_user_query){
+        die("Query Failed" . mysqli_error($connection));
+    }
 
     while($row = mysqli_fetch_array($select_user_query)){
         $db_user_id = $row['user_id'];
@@ -211,8 +214,12 @@ function loginUser($username, $password){
         $_SESSION['firstname'] = $db_user_firstname;
         $_SESSION['lastname'] = $db_user_lastname;
         $_SESSION['user_role'] = $db_user_role;
+
+        redirect("/cms/admin/index.php");
+
+    } else {
+        redirect("/cms/index.php");
     }
-        redirect("/admin");
 }
 ?>
 
