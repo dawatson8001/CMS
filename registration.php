@@ -15,7 +15,7 @@ echo "HELLO";
             'password'=>''
         ];
         echo "HELLO2";
-       if(($username !== '') && (!usernameExists($username)) && (!emailExists($email)) && ($email !== '') && ($password !== ''){
+       if((!empty($username)) && (!usernameExists($username)) && (!emailExists($email)) && (!empty($email)) && (!empty($password))){
            
             //$error['username'] = 'Username needs to be longer';
 //        }
@@ -31,7 +31,7 @@ echo "HELLO";
 //        if(strlen($password)==''){
 //            $error['password'] = 'Password cannot be empty';
 //        }
-echo "HELLO3";
+           echo "HELLO3";
 //        foreach ($error as $key => $value){
 //            if(empty($value)){
 //                unset($error[$key]);
@@ -43,6 +43,7 @@ echo "HELLO3";
             loginUser($_POST['username'], $_POST['password']);
        // }
         echo "HELLO5";
+    }
     }
 ?>        
 <!-- Navigation -->
