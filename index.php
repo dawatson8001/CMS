@@ -2,7 +2,6 @@
 <html lang="en">
     <?php include "includes/db.php"; ?>
     <?php include "includes/header.php"; ?>
-    <?php include "db.php"; ?>
     <body>
         <!-- Navigation -->
         <?php include "includes/navigation.php"; ?>
