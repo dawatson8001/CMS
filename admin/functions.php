@@ -194,9 +194,6 @@ function loginUser($username, $password){
 
     $query = "SELECT * FROM users WHERE username = '{$username}' ";
     $select_user_query = mysqli_query($connection, $query);
-    if(!$select_user_query){
-        die("Query Failed" . mysqli_error($connection));
-    }
 
     while($row = mysqli_fetch_array($select_user_query)){
         $db_user_id = $row['user_id'];
@@ -214,12 +211,8 @@ function loginUser($username, $password){
         $_SESSION['firstname'] = $db_user_firstname;
         $_SESSION['lastname'] = $db_user_lastname;
         $_SESSION['user_role'] = $db_user_role;
-
-        redirect("/admin");
-
-    } else {
-        redirect("/index");
     }
+        redirect("/admin");
 }
 ?>
 
