@@ -1,13 +1,18 @@
 <?php  include "includes/db.php"; ?>
 <?php  include "includes/header.php"; ?>
-
-
-
-<!-- Navigation -->
-
 <?php  include "includes/navigation.php"; ?>
 
+<?php
+    checkIfUserIsLoggedInAndRedirect('/cms/admin');
 
+if(ifItIsMethod('post')){
+    if(isset($_POST['username']) && isset($_POST['password'])){
+        login_user($_POST['username'], $_POST['password']);
+    }else{
+        redirect('/cms/login.php');
+    }
+}
+?>
 <!-- Page Content -->
 <div class="container">
 

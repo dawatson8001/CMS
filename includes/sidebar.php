@@ -1,32 +1,41 @@
+<?php
+if(ifItIsMethod('post')){
+    if(isset($_POST['username']) && isset($_POST['password'])){
+        loginUser($_POST['username'], $_POST['password']);
+    }else {
+        redirect('/cms/login.php');
+    }
+
+}
+?>
+
 <div class="col-md-4">
     <!-- Login -->
     <div class="well">
-       <?php if(isset($_SESSION['user_role'])): ?>
-            <h4>Logged in as <?php echo $_SESSION['username'] ?></h4>
-            <a href="includes/logout.php" class="btn btn-primary" class="btn btn-primary">Logout</a>
+        <?php if(isset($_SESSION['user_role'])): ?>
+        <h4>Logged in as <?php echo $_SESSION['username'] ?></h4>
+        <a href="includes/logout.php" class="btn btn-primary" class="btn btn-primary">Logout</a>
         <?php else: ?>
-            <h4>Login</h4>
-            <form action="includes/login.php" method ="post">
-                <div class="form-group">
-                    <input name="username" type="text" class="form-control" placeholder="Enter Username">
-                </div>
-                <div class="input-group">
-                    <input name="password" type="password" class="form-control" placeholder="Enter Password">
-                    <span class="input-group-btn">
+        <h4>Login</h4>
+        <form action="login.php" method ="post">
+            <div class="form-group">
+                <input name="username" type="text" class="form-control" placeholder="Enter Username">
+            </div>
+            <div class="input-group">
+                <input name="password" type="password" class="form-control" placeholder="Enter Password">
+                <span class="input-group-btn">
                     <button class="btn btn-primary" name="login" type="submit">Submit</button>
-                    </span>
-                </div>
-            </form>
+                </span>
+            </div>
+            <div class="form-group">
+                <a href="forgot_Password.php?=forgot=<?php echo uniqid(true) ?>">Forgot Password</a>
+            </div>
+        </form>
         <?php endif; ?>
     </div>               
     <!-- Blog Categories Well -->
     <div class="well">            
         <?php
-        
-        //$stmt = mysqli_prepare($connection, "SELECT cat_id, cat_title FROM categories");
-        //mysqli_stmt_bind_param($stmt, 's', $cat_title);
-        //mysqli_stmt_execute($stmt);
-        
         $query = "SELECT * FROM categories LIMIT 10";
         $select_categories_sidebar = mysqli_query($connection, $query);
         ?>
