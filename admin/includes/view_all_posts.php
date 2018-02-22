@@ -172,4 +172,4 @@ if(isset($_GET['reset'])){
     header("Location: posts.php");
 }
 ?>
-<?php include "./js/scripts.js"; ?>
+<?php include "admin_footer.php"; ?>
