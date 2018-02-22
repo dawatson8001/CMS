@@ -32,23 +32,23 @@ if(isset($_GET['edit_user'])){
 
             $db_user_password = $row['user_password'];
         
-        $query = "UPDATE users SET ";
-        $query .="user_firstname = '{$user_firstname}', ";
-        $query .="user_lastname = '{$user_lastname}', ";
-        $query .="user_role = '{$user_role}', ";
-        $query .="username = '{$username}', ";
+            $query = "UPDATE users SET ";
+            $query .="user_firstname = '{$user_firstname}', ";
+            $query .="user_lastname = '{$user_lastname}', ";
+            $query .="user_role = '{$user_role}', ";
+            $query .="username = '{$username}', ";
 
-        if($db_user_password != $user_password){
-            $hashed_password = password_hash($user_password, PASSWORD_BCRYPT, array('cost' => 12));   
+            if($db_user_password != $user_password){
+                $hashed_password = password_hash($user_password, PASSWORD_BCRYPT, array('cost' => 12));   
         
-        $query .="user_password = '{$hashed_password}', ";
+            $query .="user_password = '{$hashed_password}', ";
             
-        }
-        $query .="user_email = '{$user_email}' ";
-        $query .="WHERE user_id = {$the_user_id} ";
+            }
+            $query .="user_email = '{$user_email}' ";
+            $query .="WHERE user_id = {$the_user_id} ";
 
-        $edit_user_query = mysqli_real_escape_string($connection, $query);
-    }
+            $edit_user_query = mysqli_query($connection, $query);
+        }
     }
 } else {
     header("LOCATION: index.php");
