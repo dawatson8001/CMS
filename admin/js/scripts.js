@@ -24,15 +24,4 @@ $(document).ready(function(){
     setInterval(function(){
     loadUsersOnline();
     }, 500);
-    
-    
-    //Editor
-   ClassicEditor
-        .create( document.querySelector('#body'))
-    .then(editor => {
-        console.log(editor);
-    })
-        .catch(error => {
-        console.error( error );
-    });
 });

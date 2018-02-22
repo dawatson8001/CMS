@@ -208,17 +208,17 @@ function loginUser($username, $password){
 
     //$password = crypt($password, $db_user_password);
 
-    //if(password_verify($password, $db_user_password)){
+    if(password_verify($password, $db_user_password)){
         $_SESSION['username'] = $db_username;
         $_SESSION['firstname'] = $db_user_firstname;
         $_SESSION['lastname'] = $db_user_lastname;
         $_SESSION['user_role'] = $db_user_role;
 
-        //redirect("/admin/index.php");
+        redirect("/admin");
 
-    //} else {
-        redirect("/index.php");
-   // }
+    } else {
+        redirect("/index");
+    }
 }
 ?>
 

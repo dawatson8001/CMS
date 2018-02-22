@@ -120,7 +120,11 @@ if(isset($_POST['checkBoxArray'])){
                 echo "<td>{$post_title}</td>";
                 echo "<td>{$category_title}</td>";
                 echo "<td>{$post_status}</td>";
-                echo "<td><img class='img-responsive' src ='../images/$post_image'</td>";
+                if(!empty($post_image)){
+                    echo "<td><img class='img-responsive' src ='../images/$post_image'</td>";
+                }else {
+                    echo "<td>No image to display</td>";   
+                }
                 echo "<td>{$post_tags}</td>";
                 $query = "SELECT * FROM comments WHERE comment_post_id = $post_id";
                 $send_comment_query = mysqli_query($connection, $query);
@@ -168,13 +172,4 @@ if(isset($_GET['reset'])){
     header("Location: posts.php");
 }
 ?>
-<script>
-    $(document).ready(function(){
-        $(".delete_link").on('click', function(){
-            var id = $(this).attr("rel");
-            var delete_url = "posts.php?delete="+ id +" ";
-            $(".modal_delete_link").attr("href", delete_url);
-            $("#myModal").modal('show');
-        });                 
-    });
-</script>
+<?php include "./js/scripts.js"; ?>
