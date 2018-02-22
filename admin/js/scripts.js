@@ -23,5 +23,5 @@ $(document).ready(function(){
     }
     setInterval(function(){
     loadUsersOnline();
-    }, 500);
+    }, 50000);
 });

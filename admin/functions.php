@@ -16,27 +16,6 @@ function users_online(){
         $time_out_in_seconds = 300;
         $time_out = $time - $time_out_in_seconds;
 
-        //    $stmt = mysqli_prepare($connection, "SELECT id, session, time FROM users_online WHERE session = ?");
-        //    mysqli_stmt_bind_param($stmt, "s", $session);
-        //    mysqli_stmt_execute($stmt);
-        // 
-        //    //if(mysqli_stmt_num_rows($stmt)){
-        //        $stmt = mysqli_prepare($connection, "INSERT INTO users_online(session, time) VALUES(?,?)");
-        //        mysqli_stmt_bind_param($stmt, "si", $session, $time);
-        //    //}else{
-        //        $stmt = mysqli_prepare($connection, "UPDATE users_online SET time = ? WHERE session = ?");
-        //        mysqli_stmt_bind_param($stmt, "si", $time, $session);
-        //    //}
-        //    mysqli_stmt_execute($stmt);
-        //        
-        //    $stmt = mysqli_prepare($connection, "SELECT id, session, time FROM users_online WHERE time > ?");
-        //    mysqli_stmt_bind_param($stmt, "s", $time_out);
-        //    mysqli_stmt_execute($stmt);
-        //    echo mysqli_stmt_num_rows($stmt);
-        //    mysqli_stmt_execute($stmt);
-        //    mysqli_stmt_close($stmt);
-        //    }
-
         $query = "SELECT * FROM users_online WHERE session = '$session'";
         $send_query = mysqli_query($connection, $query);
         $count = mysqli_num_rows($send_query);
