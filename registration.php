@@ -35,15 +35,9 @@
             }
         }
             registerUser($username, $email, $password);
-        
+            loginUser(($_POST['username']), ($_POST['password']));
         }
-        //loginUser(($_POST['username']), ($_POST['password']));
-
     }
-if(isset($_POST['register'])){
-
-    loginUser($_POST['username'], $_POST['password']);
-}
     
 ?>        
 <!-- Navigation -->
