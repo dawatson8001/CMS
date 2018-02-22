@@ -69,9 +69,10 @@
                     </p>
                     <p><span class="glyphicon glyphicon-time"></span><?php echo $post_date; ?></p>
                     <a href="post.php?p_id=<?php echo $post_id; ?>">
-                        <img width="300" class="img-responsive" src="images/<?php 
-                            echo $post_image; 
-                                                    ?>" alt="No image to Display">
+                        <?php
+                        if(!empty($post_image)){
+                            <img width="300" class="img-responsive" src="images/<?php echo $post_image; ?>" alt="No image to Display">
+                        }?>
                     </a>
                     <hr>
                     <p><?php echo $post_content; ?></p>
