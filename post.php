@@ -79,7 +79,7 @@
                     <!-- Comments Form -->
                     <div class="well">
                         <h4>Leave a Comment:</h4>
-                        <form action="" method="post" role="form">
+                        <form action="#" method="post" role="form">
                             <div class="form-group">
                                 <label for="Author">Author</label>
                                 <input type="text" class="form-control" name="comment_author">

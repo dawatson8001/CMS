@@ -35,7 +35,7 @@
                         if(!mysqli_stmt_fetch($stmt)){
                             echo "<h1 class='text-center'>No Post available for this category</h1>";
                         }
-                        while(mysqli_stmt_fetch($stmt)){
+                        do while(mysqli_stmt_fetch($stmt)){
 
                     ?>
                     <!-- First Blog Post -->
@@ -55,9 +55,6 @@
                     <?php
                         }
                         mysqli_stmt_close($stmt);
-                        if(empty($stmt)){
-                            echo "Bye";
-                        }
                     }
                     ?>
                 </div>
