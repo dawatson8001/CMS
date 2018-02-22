@@ -22,7 +22,7 @@
                     } else{
                         $page_1 = ($page *5) - $per_page;
                     }
-                    if($_SESSION['username'])&&$_SESSION['user_role'] == 'admin'){
+                    if($_SESSION['username'])&& ($_SESSION['user_role'] == 'admin'){
                         //if($_SESSION['user_role'] == 'admin'){
                         $post_query_count = "SELECT * FROM posts";
                         }
