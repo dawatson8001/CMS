@@ -5,6 +5,8 @@
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         
+        $username_login = ($_POST['username']);
+        $password_login = ($_POST['password']);
         $username = trim($_POST['username']);
         $email    = trim($_POST['email']);
         $password = trim($_POST['password']);
@@ -13,7 +15,7 @@
             'email'=>'',
             'password'=>''
         ];
-       if(strlen($username) > 4){ 
+       if(strlen($username) < 4){ 
             $error['username'] = 'Username needs to be longer';
         }
         elseif(strlen($username)==''){
