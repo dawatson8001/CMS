@@ -5,8 +5,6 @@
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         
-        $username_login = ($_POST['username']);
-        $password_login = ($_POST['password']);
         $username = trim($_POST['username']);
         $email    = trim($_POST['email']);
         $password = trim($_POST['password']);
@@ -37,8 +35,9 @@
             }
         }
             registerUser($username, $email, $password);
-            loginUser($username_login, $password_login);
+        
         }
+        loginUser(($_POST['username']), ($_POST['password']));
 
     }
     
