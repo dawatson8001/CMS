@@ -121,7 +121,7 @@ if(isset($_POST['checkBoxArray'])){
                 echo "<td>{$category_title}</td>";
                 echo "<td>{$post_status}</td>";
                 if(!empty($post_image)){
-                    echo "<td><img class='img-responsive' src ='../images/$post_image'</td>";
+                    echo "<td><img width='200' height='100' class='img-responsive' src ='../images/$post_image'</td>";
                 }else {
                     echo "<td>No image to display</td>";   
                 }
