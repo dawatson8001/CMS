@@ -83,9 +83,9 @@ if(isset($_POST['checkBoxArray'])){
                 }?>
                 </td><?php
                 echo "<td>{$comment_date}</td>";
-                echo "<td><a href='comments.php?approve=$comment_id'>Approve</a></td>";
-                echo "<td><a href='comments.php?unapprove=$comment_id'>Unapprove</a></td>";
-                echo "<td><a href='comments.php?delete=$comment_id'>Delete</a></td>";
+                echo "<td><a class='btn btn-primary' href='comments.php?approve=$comment_id'>Approve</a></td>";
+                echo "<td><a class='btn btn-info' href='comments.php?unapprove=$comment_id'>Unapprove</a></td>";
+                echo "<td><a class='btn btn-danger' href='comments.php?delete=$comment_id'>Delete</a></td>";
                 echo "</tr>";
             }
             ?>

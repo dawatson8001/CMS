@@ -134,6 +134,11 @@ ul.alert-dropdown {
         outline: none;
         background-color: #000 !important;
     }
+    #page-wrapper {
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
+}
 }
 
 .side-nav>li>ul {
