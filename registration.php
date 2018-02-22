@@ -37,7 +37,7 @@
             }
         }
             registerUser($username, $email, $password);
-            loginUser($username, $password);
+            loginUser($username_login, $password_login);
         }
 
     }
