@@ -16,27 +16,27 @@
        if(strlen($username) > 4){ 
             $error['username'] = 'Username needs to be longer';
         }
-        if(strlen($username)==''){
+        elseif(strlen($username)==''){
             $error['username'] = 'Username cannot be empty';
         }
-        if(usernameExists($username)){
+        elseif(usernameExists($username)){
             $error['username'] = 'Username already exists, please choose another.';
         }
-        if(emailExists($email)){
+        elseif(emailExists($email)){
             $error['email'] = 'Email already exists, <a href="index.php">Login</a>';
         }
-        if(strlen($password)==''){
+        elseif(strlen($password)==''){
             $error['password'] = 'Password cannot be empty';
         }
+        else{
         foreach ($error as $key => $value){
             if(empty($value)){
                 unset($error[$key]);
             }
         }
-        //if(empty($error)){
             registerUser($username, $email, $password);
             loginUser($username, $password);
-        //}
+        }
 
     }
     
