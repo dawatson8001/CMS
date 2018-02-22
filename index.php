@@ -71,7 +71,9 @@
                     <a href="post.php?p_id=<?php echo $post_id; ?>">
                         <?php
                         if(!empty($post_image)){
+                            ?>
                             <img width="300" class="img-responsive" src="images/<?php echo $post_image; ?>" alt="No image to Display">
+                            <?php
                         }?>
                     </a>
                     <hr>
