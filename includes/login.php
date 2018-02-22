@@ -1,18 +1,4 @@
-<?php  include "includes/db.php"; ?>
-<?php  include "includes/header.php"; ?>
-<?php  include "includes/navigation.php"; ?>
 
-<?php
-checkIfUserIsLoggedInAndRedirect('/cms/admin');
-
-if(ifItIsMethod('post')){
-    if(isset($_POST['username']) && isset($_POST['password'])){
-        loginUser($_POST['username'], $_POST['password']);
-    }else{
-        redirect('login.php');
-    }
-}
-?>
 <!-- Page Content -->
 <div class="container">
     <div class="form-gap"></div>
@@ -50,5 +36,4 @@ if(ifItIsMethod('post')){
         </div>
     </div>
     <hr>
-    <?php include "includes/footer.php";?>
 </div> <!-- /.container -->
