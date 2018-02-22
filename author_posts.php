@@ -24,14 +24,11 @@
                         $post_image = $row['post_image'];
                         $post_content = $row['post_content']; 
                     ?>
-                    <h1 class="page-header">
-                        Page Heading
-                        <small>Secondary Text</small>
-                    </h1>
+ 
                     <!-- First Blog Post -->
-                    <h2>
+                    <h1 class="page-header">
                         <a href="#"><?php echo $post_title; ?></a>
-                    </h2>
+                    </h1>
                     <p class="lead">All posts by <?php echo $post_user ?></p>
                     <p><span class="glyphicon glyphicon-time"></span><?php echo $post_date; ?></p>
                     <hr>
@@ -48,9 +45,9 @@
 
                     if(isset($_POST['create_comment'])){
                         $the_post_id = $_GET['p_id'];
-                        $comment_author = escape($_POST['comment_author']);
-                        $comment_email = escape($_POST['comment_email']);
-                        $comment_content = escape($_POST['comment_content']);
+                        $comment_author = $_POST['comment_author'];
+                        $comment_email = $_POST['comment_email'];
+                        $comment_content = $_POST['comment_content'];
                             if(!empty($comment_author) && !empty($comment_email) && !empty($comment_content)){
                                 $query = "INSERT INTO comments(comment_post_id, comment_author, comment_email, comment_content, comment_status, comment_date)";
                                 $query .= "VALUES({$the_post_id}, '{$comment_author}', '{$comment_email}', '{$comment_content}', 'unapproved', now())";
