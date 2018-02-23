@@ -35,7 +35,7 @@
                         //if(!mysqli_stmt_fetch($stmt)){
                           //  echo "<h1 class='text-center'>No Post available for this category</h1>";
                         //}
-                    <?php
+                    
                             while(mysqli_stmt_fetch($stmt)){
 
                     ?>
