@@ -35,7 +35,6 @@
 <![endif]-->
 <link href="./css/style.css" rel="stylesheet">
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script>
 <script src="/admin/js/jquery.js"></script>
 </head>
 <body>
