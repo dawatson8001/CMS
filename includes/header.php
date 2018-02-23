@@ -1,3 +1,4 @@
+<?php include_once "admin/functions.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,5 +23,4 @@
     <![endif]-->
     <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script>
 </head>
-<?php include_once "admin/functions.php"; ?>
-    <body>
+<body>
