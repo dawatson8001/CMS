@@ -26,14 +26,13 @@
                             mysqli_stmt_execute($stmt1);
                             mysqli_stmt_bind_result($stmt1, $post_id, $post_title, $post_author, $post_date, $post_image, $post_content);
                             $stmt = $stmt1;
-                        } elseif($stmt2){
+                        } else{
                             mysqli_stmt_bind_param($stmt2, "is", $post_category_id, $published);
                             mysqli_stmt_execute($stmt2);
                             mysqli_stmt_bind_result($stmt2, $post_id, $post_title, $post_author, $post_date, $post_image, $post_content);
                             $stmt = $stmt2;
-                        } else{
-                            echo "<h1 class='text-center'>No Post available for this category</h1>";
-                        }
+                        }   
+
                     
                             while(mysqli_stmt_fetch($stmt)){
 
@@ -55,6 +54,9 @@
 
                     <?php
                             }
+                                                if(!mysqli_stmt_fetch($stmt)){
+                            echo "<h1 class='text-center'>No Post available for this category</h1>";
+                        }
 
                             mysqli_stmt_close($stmt);
                         }
