@@ -225,7 +225,7 @@ ul.alert-dropdown {
 padding: 0;
 }
 table{
-    grid-auto-flow: column;
+    overflow: auto;
 }
 @media(max-width:500px) {
     body{
