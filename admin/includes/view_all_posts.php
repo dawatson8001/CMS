@@ -50,8 +50,8 @@ if(isset($_POST['checkBoxArray'])){
     }
 }
 ?>
-<form name="info-table" action="" method="post" >
-    <table class="table table-bordered table-hover table-responsive" oveflow="auto">
+<form name="info-table" action="" method="post" id="mainbody" >
+    <table class="table table-bordered table-hover table-responsive" oveflow="auto" id="mainbody">
         <div id="bulkOptionsContainer" class="col-xs-4">
             <select class="form-control" name="bulk_options" id="">
                 <option value="">Select Options</option>
@@ -108,7 +108,7 @@ if(isset($_POST['checkBoxArray'])){
 
                 echo "<tr>";
             ?>
-            <td><input class='checkBoxes' id='selectAllBoxes' type='checkbox' name='checkBoxArray[]' value='<?php  
+            <td id="mainbody"><input class='checkBoxes' id='selectAllBoxes' type='checkbox' name='checkBoxArray[]' value='<?php  
                 echo "{$post_id}"; ?>'></td>
             <?php 
                 echo "<td>{$post_id}</td>";
