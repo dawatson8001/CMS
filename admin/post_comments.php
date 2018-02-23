@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
     <?php include "includes/admin_header.php"; ?>
-    <body>
         <div id="wrapper">
             <!-- Navigation -->
             <?php include "includes/admin_navigation.php"; ?>
@@ -109,6 +106,3 @@ if(isset($_GET['delete'])){
         </div>
         <!-- /#wrapper -->
         <?php include "includes/admin_footer.php"; ?>
-    </body>
-
-</html>

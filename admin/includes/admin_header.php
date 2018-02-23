@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php ob_start(); ?>
 <?php include_once "../includes/db.php";  ?>
 <?php include "../admin/functions.php"; ?>
@@ -36,3 +38,4 @@
 <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script>
 <script src="/admin/js/jquery.js"></script>
 </head>
+<body>
