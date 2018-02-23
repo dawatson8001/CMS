@@ -4,7 +4,7 @@ function escape($string){
     mysqli_real_escape_string($connection, trim($string));
 
 }
-function users_online(){
+function usersOnline(){
         global $connection;
         if(!$connection){
             session_start();
@@ -26,7 +26,7 @@ function users_online(){
         }
         echo $count_user = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM users_online WHERE time > '$time_out'"));
 }}
-//users_online();
+users_online();
 
 function confirmQuery($result){
     global $connection;
