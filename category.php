@@ -32,24 +32,9 @@
                             mysqli_stmt_bind_result($stmt2, $post_id, $post_title, $post_author, $post_date, $post_image, $post_content);
                             $stmt = $stmt2;
                         }   
-                        if(!mysqli_stmt_fetch($stmt)){
-                            echo "<h1 class='text-center'>No Post available for this category</h1>";
-                        } else{
-                    ?>
-                    <h1 class="page-header">
-                        <a href=""><?php echo $post_title; ?></a>
-                    </h1>
-                    <p class="lead">
-                        by <a href="#"><?php echo $post_author; ?></a>
-                    </p>
-                    <p><span class="glyphicon glyphicon-time"></span><?php echo $post_date; ?></p>
-                    <hr>
-                    <img width="300" class="img-responsive" src="images/<?php echo $post_image; ?>" alt="">
-                    <hr>
-                    <p><?php echo $post_content; ?></p>
-                    <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-                    <hr>
-                    }
+                        //if(!mysqli_stmt_fetch($stmt)){
+                          //  echo "<h1 class='text-center'>No Post available for this category</h1>";
+                        //}
                     <?php
                             while(mysqli_stmt_fetch($stmt)){
 
