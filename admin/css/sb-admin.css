@@ -224,6 +224,7 @@ ul.alert-dropdown {
 #bulkOptionsContainer {
 padding: 0;
 }
-.table-responsive {
-    color: yellow;
+form {
+    opacity: 1;
+    background-color: white;
 }
