@@ -9,7 +9,7 @@ function users_online(){
         if(!$connection){
             session_start();
             include("../includes/db.php");
-        }
+        
         $session = session_id();
         $time = time();
         $time_out_in_seconds = 300;
@@ -25,8 +25,8 @@ function users_online(){
             mysqli_query($connection, "UPDATE users_online SET time = '$time' WHERE session = '$session'");
         }
         echo $count_user = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM users_online WHERE time > '$time_out'"));
-}
-users_online();
+}}
+//users_online();
 
 function confirmQuery($result){
     global $connection;
