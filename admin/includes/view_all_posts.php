@@ -1,4 +1,3 @@
-    <?php include "includes/admin_header.php"; ?>
 <?php
 include ("delete_modal.php");
 if(isset($_POST['checkBoxArray'])){
