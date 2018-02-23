@@ -224,7 +224,11 @@ ul.alert-dropdown {
 #bulkOptionsContainer {
 padding: 0;
 }
+table{
+    grid-auto-flow: column;
+}
 @media(max-width:500px) {
     body{
-    background-color: white;
-    }}
+        background-color: white;
+    }
+}
