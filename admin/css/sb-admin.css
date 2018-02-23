@@ -5,7 +5,11 @@
  */
 
 /* Global Styles */
-
+@media(min-width:100 max-width:767px) {
+    body{
+        background-color: white;
+    }
+}
 body {
     margin-top: 100px;
     background-color: #222;
@@ -223,9 +227,4 @@ ul.alert-dropdown {
 }
 #bulkOptionsContainer {
 padding: 0;
-}
-@media(min-width:100 max-width:767px) {
-    body{
-        background-color: white;
-    }
 }
