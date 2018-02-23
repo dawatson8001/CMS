@@ -8,7 +8,7 @@
 
 body {
     margin-top: 100px;
-    background-color: #fff;
+    background-color: #222;
 }
 
 @media(min-width:768px) {
@@ -224,6 +224,6 @@ ul.alert-dropdown {
 #bulkOptionsContainer {
 padding: 0;
 }
-form {
+#infotable {
     background-color: white;
 }
