@@ -35,12 +35,12 @@
                         if(!mysqli_stmt_fetch($stmt)){
                             echo "<h1 class='text-center'>No Post available for this category</h1>";
                         }
-                        while( $row = mysqli_stmt_fetch($stmt)){
+                        while(mysqli_stmt_fetch($stmt)){
 
                     ?>
                     <!-- First Blog Post -->
                     <h1 class="page-header">
-                        <a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?></a>
+                        <a href=""><?php echo $post_title; ?></a>
                     </h1>
                     <p class="lead">
                         by <a href="#"><?php echo $post_author; ?></a>
