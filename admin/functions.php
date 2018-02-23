@@ -5,7 +5,6 @@ function escape($string){
 
 }
 function users_online(){
-    if(isset($_GET['onlineusers'])){
         global $connection;
         if(!$connection){
             session_start();
@@ -26,8 +25,6 @@ function users_online(){
             mysqli_query($connection, "UPDATE users_online SET time = '$time' WHERE session = '$session'");
         }
         echo $count_user = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM users_online WHERE time > '$time_out'"));
-    }
-
 }
 users_online();
 
