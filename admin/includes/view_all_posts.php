@@ -66,7 +66,7 @@ if(isset($_POST['checkBoxArray'])){
             <a class="btn btn-primary" href="posts.php?source=add_post">Add New</a>
         </div>
         <thead>
-            <tr id="mainbody">
+            <tr>
                 <th><input id="selectAllBoxes" type="checkbox"></th>
                 <th>ID</th>
                 <th>User</th>
@@ -83,7 +83,7 @@ if(isset($_POST['checkBoxArray'])){
                 <th>Views</th>
             </tr>
         </thead>
-        <tbody id="mainbody">
+        <tbody>
             <?php
 
             $query = "SELECT posts.post_id, posts.post_author, posts.post_user, posts.post_title, posts.post_category_id, posts.post_status, posts.post_image, posts.post_tags, posts.post_comment_count, posts.post_date, posts.post_views_count,  categories.cat_id, categories.cat_title";
@@ -108,7 +108,7 @@ if(isset($_POST['checkBoxArray'])){
 
                 echo "<tr>";
             ?>
-            <td id="mainbody"><input class='checkBoxes' id='selectAllBoxes' type='checkbox' name='checkBoxArray[]' value='<?php  
+            <td><input class='checkBoxes' id='selectAllBoxes' type='checkbox' name='checkBoxArray[]' value='<?php  
                 echo "{$post_id}"; ?>'></td>
             <?php 
                 echo "<td>{$post_id}</td>";
@@ -146,7 +146,7 @@ if(isset($_POST['checkBoxArray'])){
                 
                 <?php
                 //echo "<td><a rel='$post_id' href='javascript:void(0)' class='delete_link'>Delete</a></td>";
-                echo "<td><a href='posts.php?reset={$post_id}'>{$post_views_count}</a></td>";
+                echo "<td id='mainbody'><a href='posts.php?reset={$post_id}'>{$post_views_count}</a></td>";
                 echo "</tr>";
             }
             ?>
