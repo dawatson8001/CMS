@@ -224,7 +224,8 @@ ul.alert-dropdown {
 #bulkOptionsContainer {
 padding: 0;
 }
-#mainbody{
+#main-body{
     opacity:0;
     background-color: white;
+    color: black
 }
