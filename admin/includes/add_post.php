@@ -63,6 +63,7 @@ if(isset($_POST['create_post'])){
                 $username = $row['username'];
                 echo "<option selected value='{$username}'>{$username}</option>";
             }
+            echo "<option selected value='{$_SESSION['username']}'>{$_SESSION['username']}</option>"; ?>
             ?>
         </select>
     </div>
