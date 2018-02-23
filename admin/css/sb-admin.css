@@ -224,6 +224,7 @@ ul.alert-dropdown {
 #bulkOptionsContainer {
 padding: 0;
 }
-@media(max-width:768px) {
+@media(max-width:500px) {
+    body{
     background-color: white;
-}
+    }}
