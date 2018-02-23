@@ -101,7 +101,7 @@ if(isset($_POST['update_post'])){
                 echo "<option selected value='{$username}'>{$username}</option>";
             }
             
-            echo "<option selected value='{$post_user}'>{$post_user}</option>"; ?>
+            echo "<option selected value='{$_SESSION['username']}'>{$_SESSION['username']}</option>"; ?>
         </select>
     </div>
     <div class="form-group">
