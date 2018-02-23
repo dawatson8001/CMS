@@ -222,6 +222,6 @@ ul.alert-dropdown {
 .panel-yellow a:hover {
     color: #df8a13;
 }
-#infotable {
-    background-color: white;
+.table-responsive {
+    background-color: orange;
 }
