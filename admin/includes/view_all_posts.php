@@ -51,7 +51,7 @@ if(isset($_POST['checkBoxArray'])){
 }
 ?>
 <form name="info-table" action="" method="post" >
-    <table class="table table-bordered table-hover table-responsive">
+    <table class="table table-bordered table-hover table-responsive" oveflow='auto'>
         <div id="bulkOptionsContainer" class="col-xs-4">
             <select class="form-control" name="bulk_options" id="">
                 <option value="">Select Options</option>
@@ -61,7 +61,7 @@ if(isset($_POST['checkBoxArray'])){
                 <option value="clone">Clone</option>
             </select>
         </div>
-        <div class="col-xs-4" id="infotable">
+        <div class="col-xs-4">
             <input type="submit" name="submit" class="btn btn-success" value="Apply">
             <a class="btn btn-primary" href="posts.php?source=add_post">Add New</a>
         </div>
