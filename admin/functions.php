@@ -26,7 +26,7 @@ function usersOnline(){
         }
         echo $count_user = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM users_online WHERE time > '$time_out'"));
 }}
-users_online();
+//users_online();
 
 function confirmQuery($result){
     global $connection;
