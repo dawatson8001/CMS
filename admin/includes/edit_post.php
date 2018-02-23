@@ -89,7 +89,6 @@ if(isset($_POST['update_post'])){
     <div class="form-group">
        <label for="users">Users</label>
         <select name="post_user" id="">
-           <?php echo "<option selected value='{$post_user}'>{$post_user}</option>"; ?>
             <?php 
             
             $users_query = "SELECT * FROM users";
@@ -101,7 +100,8 @@ if(isset($_POST['update_post'])){
                 $username = $row['username'];
                 echo "<option selected value='{$username}'>{$username}</option>";
             }
-            ?>
+            
+            echo "<option selected value='{$post_user}'>{$post_user}</option>"; ?>
         </select>
     </div>
     <div class="form-group">
