@@ -5,9 +5,9 @@
  */
 
 /* Global Styles */
-@media(min-width:100 max-width:767px) {
+@media( max-width:767px) {
     body{
-        background-color: white;
+        background-color: #fff;
     }
 }
 body {
