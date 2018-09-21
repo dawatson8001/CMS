@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php ob_start(); ?>
 <?php include_once "../includes/db.php";  ?>
 <?php include "../admin/functions.php"; ?>
@@ -21,10 +23,10 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="./css/sb-admin.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+    <link href="./css/sb-admin.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -33,6 +35,6 @@
 <![endif]-->
 <link href="./css/style.css" rel="stylesheet">
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script>
 <script src="/admin/js/jquery.js"></script>
 </head>
+<body>

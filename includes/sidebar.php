@@ -1,14 +1,3 @@
-<?php
-if(ifItIsMethod('post')){
-    if(isset($_POST['username']) && isset($_POST['password'])){
-        loginUser($_POST['username'], $_POST['password']);
-    }else {
-        redirect('/cms/login.php');
-    }
-
-}
-?>
-
 <div class="col-md-4">
     <!-- Login -->
     <div class="well">
@@ -17,7 +6,7 @@ if(ifItIsMethod('post')){
         <a href="includes/logout.php" class="btn btn-primary" class="btn btn-primary">Logout</a>
         <?php else: ?>
         <h4>Login</h4>
-        <form action="login.php" method ="post">
+        <form action="includes/login.php" method ="post">
             <div class="form-group">
                 <input name="username" type="text" class="form-control" placeholder="Enter Username">
             </div>
@@ -26,9 +15,6 @@ if(ifItIsMethod('post')){
                 <span class="input-group-btn">
                     <button class="btn btn-primary" name="login" type="submit">Submit</button>
                 </span>
-            </div>
-            <div class="form-group">
-                <a href="forgot_Password.php?=forgot=<?php echo uniqid(true) ?>">Forgot Password</a>
             </div>
         </form>
         <?php endif; ?>

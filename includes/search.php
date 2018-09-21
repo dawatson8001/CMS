@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <?php //include "db.php"; ?>
-   <?php include "header.php"; ?>
-   
-   <body>
-    <!-- Navigation -->
-    <?php include "navigation.php"; ?>
-
-
     <!-- Page Content -->
     <div class="container">
 
@@ -61,17 +51,8 @@
                 <hr>
             </div>
             <!-- Blog Sidebar Widgets Column -->
-           <?php include "sidebar.php"; ?>
-
         </div>
         <!-- /.row -->
-
         <hr>
-
         <!-- Footer -->
-        <?php include "footer.php"; ?>
-
        </div>
-       </body>
-
-</html>

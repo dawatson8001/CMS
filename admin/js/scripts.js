@@ -21,7 +21,7 @@ $(document).ready(function(){
             $(".usersonline").text(data);
         });
     }
-    setInterval(function(){
-    loadUsersOnline();
-    }, 50000);
+    //setInterval(function(){
+    //loadUsersOnline();
+   // }, 50000);
 });

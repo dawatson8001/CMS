@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
     <?php include "includes/admin_header.php"; ?>
-    <body>
     <?php
        if(!isAdmin($_SESSION['username'])){
            header("Location: index.php");
@@ -46,6 +43,3 @@
         </div>
         <!-- /#wrapper -->
         <?php include "includes/admin_footer.php"; ?>
-    </body>
-
-</html>
